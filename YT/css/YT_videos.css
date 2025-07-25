@@ -1,0 +1,59 @@
+.videos {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: fixed;
+  overflow: auto;
+  top: 100px;
+  left: 250px;
+}
+.videos a {
+  text-decoration: none;
+  width: 400px;
+  height: 325px;
+  border-radius: 10px;
+  /* background-color: #555; */
+  color: #000;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.videos a > img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.videos a .information {
+  display: flex;
+  height: 65px;
+  padding: 15px 0 0;
+  box-sizing: border-box;
+}
+.videos a .information > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+/* 多行文字截斷省略號 最多顯示2行，第2行末尾出現 … */
+.videos a .information .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 25px;
+}
+.videos a .sub-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  font-size: 15px;
+  line-height: 20px;
+  height: 40px;
+  color: #888;
+}

@@ -1,0 +1,80 @@
+.friends {
+  width: 300px;
+  height: 100vh;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.friends .person label {
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+}
+.friends .person label:hover {
+  background-color: #eee;
+}
+.friends .person .head img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+.friends .person .info {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.friends .person .info .name {
+  height: 25px;
+  color: #000;
+}
+.friends .person .info .msg {
+  width: 130px;
+  height: 25px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.friends .person .time {
+  margin-left: auto;
+  color: #888;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.messageBox {
+  display: none;
+}
+
+#friendMarin:checked ~ .messages #marinMessageBox,
+#friendAnna:checked ~ .messages #annaMessageBox,
+#friendGojo:checked ~ .messages #gojoMessageBox,
+#friendMao:checked ~ .messages #maoMessageBox,
+#friendPapa:checked ~ .messages #papaMessageBox,
+#friendRana:checked ~ .messages #ranaMessageBox,
+#friendMeguru:checked ~ .messages #meguruMessageBox,
+#friendTest:checked ~ .messages #testMessageBox,
+#friendMarin:checked ~ .messages .msgInput,
+#friendAnna:checked ~ .messages .msgInput,
+#friendGojo:checked ~ .messages .msgInput,
+#friendMao:checked ~ .messages .msgInput,
+#friendPapa:checked ~ .messages .msgInput,
+#friendRana:checked ~ .messages .msgInput,
+#friendMeguru:checked ~ .messages .msgInput,
+#friendTest:checked ~ .messages .msgInput {
+  display: block;
+}
+#friendMarin:checked ~ .friends .person #marinLabel,
+#friendAnna:checked ~ .friends .person #annaLabel,
+#friendGojo:checked ~ .friends .person #gojoLabel,
+#friendMao:checked ~ .friends .person #maoLabel,
+#friendPapa:checked ~ .friends .person #papaLabel,
+#friendRana:checked ~ .friends .person #ranaLabel,
+#friendMeguru:checked ~ .friends .person #meguruLabel,
+#friendTest:checked ~ .friends .person #testLabel {
+  background-color: #eee;
+}

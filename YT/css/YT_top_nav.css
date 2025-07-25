@@ -1,0 +1,97 @@
+.top-nav {
+  width: 100%;
+  height: 100px;
+  padding: 25px 0;
+  box-sizing: border-box;
+  /* background-color: #eee; */
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.top-nav div {
+  margin: 0 20px;
+}
+.top-nav .last-3-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.top-nav .yt-logo img {
+  width: 150px;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+.top-nav .search {
+  height: 100%;
+  margin: auto;
+}
+.top-nav .search form {
+  display: flex;
+  width: 500px;
+  height: 100%;
+}
+.top-nav form input {
+  width: 400px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #666;
+  border-radius: 100px 0 0 100px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.top-nav form button {
+  width: 100px;
+  font-size: 20px;
+  border: 1px solid #666;
+  border-radius: 0 100px 100px 0;
+  border-left: 0;
+  background-color: #ccc;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.top-nav form button:hover {
+  background-color: #aaa;
+}
+.top-nav .upload button {
+  width: 100px;
+  height: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ccc;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.top-nav .upload:hover button {
+  background-color: #aaa;
+}
+.top-nav .icon button {
+  border: none;
+  font-size: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.top-nav .icon button::after {
+  content: "9+";
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 15px;
+  font-size: 10px;
+  line-height: 15px;
+  border-radius: 10px;
+  background-color: #f00;
+  color: #fff;
+}
+.top-nav .user img {
+  width: 50px;
+  vertical-align: middle;
+  cursor: pointer;
+}

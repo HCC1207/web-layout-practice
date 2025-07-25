@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Chat Web</title>
+    <link rel="stylesheet" href="./css/ChatWeb_sidebar.css" />
+    <link rel="stylesheet" href="./css/ChatWeb_friends.css" />
+    <link rel="stylesheet" href="./css/ChatWeb_message.css" />
+    <style>
+      @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-family: sans-serif;
+      }
+      html,
+      body {
+        min-height: 100vh;
+        min-width: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <nav>
+          <a href="../index.html" title="好友">
+            <i class="fa fa-child" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="聊天">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="加入好友">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="會議室">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="截取畫面">
+            <i class="fa fa-cut" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="Keep筆記">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="關閉所有提醒">
+            <i class="fa fa-volume-down" aria-hidden="true"></i>
+          </a>
+          <a href="#" title="設定">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+      <input type="radio" name="friendSelect" id="friendMarin" />
+      <input type="radio" name="friendSelect" id="friendAnna" />
+      <input type="radio" name="friendSelect" id="friendGojo" />
+      <input type="radio" name="friendSelect" id="friendMao" />
+      <input type="radio" name="friendSelect" id="friendPapa" />
+      <input type="radio" name="friendSelect" id="friendRana" />
+      <input type="radio" name="friendSelect" id="friendMeguru" />
+      <input type="radio" name="friendSelect" id="friendTest" />
+      <div class="friends">
+        <div class="person">
+          <label for="friendMarin" id="marinLabel">
+            <div class="head">
+              <img src="../pic/marin_head.png" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">喜多川海夢</div>
+              <div class="msg">話說你這次打算出什麼角色</div>
+            </div>
+            <div class="time">下午9:45</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendAnna" id="annaLabel">
+            <div class="head">
+              <img src="../pic/anna_ya_head.png" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">八奈見杏菜</div>
+              <div class="msg">你記得還錢就好</div>
+            </div>
+            <div class="time">下午9:42</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendGojo" id="gojoLabel">
+            <div class="head">
+              <img src="../pic/gojo_head.png" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">五条新菜</div>
+              <div class="msg">我知道了 謝謝你</div>
+            </div>
+            <div class="time">下午8:30</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendMao" id="maoLabel">
+            <div class="head">
+              <img src="../pic/maomao_head.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">貓貓</div>
+              <div class="msg">老天保佑</div>
+            </div>
+            <div class="time">下午8:05</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendPapa" id="papaLabel">
+            <div class="head">
+              <img src="../pic/PaPaBear_head.png" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">無名氏</div>
+              <div class="msg">希望今年電影版會在台灣上映 我等好幾年了</div>
+            </div>
+            <div class="time">下午5:20</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendRana" id="ranaLabel">
+            <div class="head">
+              <img src="../pic/rana_head.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">要樂奈</div>
+              <div class="msg">我會去</div>
+            </div>
+            <div class="time">下午5:10</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendMeguru" id="meguruLabel">
+            <div class="head">
+              <img src="../pic/Meguru_head.png" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">蜂樂廻</div>
+              <div class="msg">謝啦兄弟</div>
+            </div>
+            <div class="time">下午3:48</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendTest" id="testLabel">
+            <div class="head">
+              <img src="../pic/marin_head6.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="msg">完全可以無視</div>
+            </div>
+            <div class="time">上午00:01</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendTest" id="testLabel">
+            <div class="head">
+              <img src="../pic/marin_head6.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="msg">完全可以無視</div>
+            </div>
+            <div class="time">上午00:01</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendTest" id="testLabel">
+            <div class="head">
+              <img src="../pic/marin_head6.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="msg">完全可以無視</div>
+            </div>
+            <div class="time">上午00:01</div>
+          </label>
+        </div>
+        <div class="person">
+          <label for="friendTest" id="testLabel">
+            <div class="head">
+              <img src="../pic/marin_head6.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="msg">完全可以無視</div>
+            </div>
+            <div class="time">上午00:01</div>
+          </label>
+        </div>
+      </div>
+      <div class="messages">
+        <div class="messageBox" id="marinMessageBox">
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">喜多川海夢</div>
+              <div class="txt">嗨！！！！</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">嗨</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">喜多川海夢</div>
+              <div class="txt">下禮拜的COS活動你會來嗎</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我應該會跟朋友去看</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">喜多川海夢</div>
+              <div class="txt">太好了！話說你有看到五條嗎</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">沒看到欸</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">話說你這次打算出什麼角色</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="annaMessageBox">
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/anna_ya_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">八奈見杏菜</div>
+              <div class="txt">抱歉又忘記帶錢包了</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">沒事 問題不大</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/anna_ya_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">八奈見杏菜</div>
+              <div class="txt">至少東西是好吃的對吧</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/anna_ya_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">八奈見杏菜</div>
+              <div class="txt">相信我準沒錯</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">這倒是真的</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/anna_ya_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">八奈見杏菜</div>
+              <div class="txt">那明天要吃什麼勒</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我都可以</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">你記得還錢就好</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="gojoMessageBox">
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">今天謝謝你</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/gojo_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">五条新菜</div>
+              <div class="txt">不會 以後也請多多指教</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">包在你身上</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">大哥 海夢再找你</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/gojo_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">五条新菜</div>
+              <div class="txt">我知道了 謝謝你</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="maoMessageBox">
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">他狀況如何</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/maomao_head.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">貓貓</div>
+              <div class="txt">應該是普通的感冒</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/maomao_head.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">貓貓</div>
+              <div class="txt">你不用太擔心</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">了解 那就麻煩妳了</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/maomao_head.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">貓貓</div>
+              <div class="txt">小事情 剛好讓他幫我測試新藥物</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">呃...</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">老天保佑</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="papaMessageBox">
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">你最近有找到什麼好看的嗎</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/PaPaBear_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">無名氏</div>
+              <div class="txt">佐賀偶像是傳奇</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/PaPaBear_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">無名氏</div>
+              <div class="txt">一生推</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">那個我有看 真的是一生推</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我特別喜歡2號跟0號</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/PaPaBear_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">無名氏</div>
+              <div class="txt">希望今年電影版會在台灣上映 我等好幾年了</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="ranaMessageBox">
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/rana_head.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">要樂奈</div>
+              <div class="txt">抹茶</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我也喜歡</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/rana_head.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">要樂奈</div>
+              <div class="txt">Live</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我會去</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="meguruMessageBox">
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">兄弟你今天太神啦</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">帽子戲法超帥</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/Meguru_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">蜂樂廻</div>
+              <div class="txt">嘿嘿 隊友很給力都做球給我啦</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">明天比賽也加油</div>
+            </div>
+          </div>
+          <div class="user local">
+            <div class="pic">
+              <img src="../pic/Miu_head2.jpg" />
+            </div>
+            <div class="name-msg-locate">
+              <div class="name">Kosaru</div>
+              <div class="txt">我會看線上直播幫你加油的</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/Meguru_head.png" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">蜂樂廻</div>
+              <div class="txt">謝啦兄弟</div>
+            </div>
+          </div>
+        </div>
+        <div class="messageBox" id="testMessageBox">
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">這個頁面暫無RWD</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">
+                最左側的選單也是無功能的 除了第一個"好友"選項
+                可以回到模仿版面列表
+              </div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">聊天紀錄也是直接寫在HTML裡面</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">
+                所以也暫時沒辦法新增訊息 只能打字按enter模擬送出
+              </div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">這個頭像點進來的聊天室單純用來說明這個網頁</div>
+            </div>
+          </div>
+          <div class="user remote">
+            <div class="pic">
+              <img src="../pic/marin_head6.jpg" />
+            </div>
+            <div class="name-msg-remote">
+              <div class="name">測試用(單純湊數)</div>
+              <div class="txt">完全可以無視</div>
+            </div>
+          </div>
+        </div>
+        <textarea
+          class="msgInput"
+          id="msgInput"
+          placeholder="輸入訊息"
+          autofocus
+        ></textarea>
+      </div>
+    </div>
+    <script src="./js/ChatWeb.js"></script>
+  </body>
+</html>
